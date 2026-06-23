@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme used after splash screen dismisses -->
+    <style name="Theme.NutriLens" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Splash screen theme — applied to MainActivity in the manifest.
+         installSplashScreen() in MainActivity switches to Theme.NutriLens
+         (via postSplashScreenTheme) before the first frame is drawn. -->
+    <style name="Theme.NutriLens.Splash" parent="Theme.SplashScreen">
+        <!-- Green background matching the app icon background -->
+        <item name="windowSplashScreenBackground">#2E7D32</item>
+        <!-- The adaptive icon foreground is used as the splash icon -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <!-- Icon background color (shown inside the circular mask on Android 12+) -->
+        <item name="windowSplashScreenIconBackgroundColor">#2E7D32</item>
+        <!-- Theme to apply once the splash screen is dismissed -->
+        <item name="postSplashScreenTheme">@style/Theme.NutriLens</item>
+    </style>
+</resources>
